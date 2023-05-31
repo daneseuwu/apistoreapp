@@ -1,7 +1,7 @@
 {
-  "name": "storeapi",
+  "name": "apistoreapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "api de productos storeapp backend",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
