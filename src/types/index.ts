@@ -37,8 +37,3 @@ export interface IOrder {
   updatedAt: string;
   paymentStatus: string;
 }
-
-export interface IKey {
-  STRIPE_SECRET_KEY: string;
-  STRIPE_WEBHOOK_SECRET: string;
-}

@@ -18,7 +18,7 @@ app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
 
 conn();
-const port = process.env.port || 9000;
+const port = process.env.PORT || 9000;
 
 app.listen(port, () => {
   try {
