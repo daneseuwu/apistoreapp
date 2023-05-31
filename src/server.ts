@@ -4,9 +4,7 @@ import conn from "./config/mongo";
 import productRoutes from "./routes/product";
 import orderRoutes from "./routes/order";
 import { webhookHandler } from "./webhook";
-
-import * as dotenv from "dotenv";
-dotenv.config();
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
