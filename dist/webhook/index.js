@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.webhookHandler = void 0;
 const stripe_1 = __importDefault(require("stripe"));
 const order_1 = __importDefault(require("../model/order"));
+require("dotenv").config();
 const STRIPE_KEY = process.env.STRIPE_SECRET_KEY || "";
 const WEBHOOK_KEY = process.env.STRIPE_WEBHOOK_SECRET || "";
-console.log(STRIPE_KEY);
 const stripeClient = new stripe_1.default(STRIPE_KEY, {
     apiVersion: "2022-11-15",
 });
