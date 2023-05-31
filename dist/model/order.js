@@ -23,8 +23,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importStar(require("mongoose"));
-const orderSchema = new mongoose_1.Schema({
+var mongoose_1 = __importStar(require("mongoose"));
+var orderSchema = new mongoose_1.Schema({
     user: {
         name: {
             type: String,
@@ -85,6 +85,6 @@ const orderSchema = new mongoose_1.Schema({
 }, {
     timestamps: true,
 });
-const Order = mongoose_1.default.model("Order", orderSchema);
+var Order = mongoose_1.default.model("Order", orderSchema);
 exports.default = Order;
 //# sourceMappingURL=order.js.map
