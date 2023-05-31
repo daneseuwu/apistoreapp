@@ -7,7 +7,6 @@
     "build": "tsc -p tsconfig.json",
     "dev": "ts-node-dev ./src/app.ts",
     "start": "node ./dist/app.js",
-    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
