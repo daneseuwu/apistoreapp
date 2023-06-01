@@ -14,9 +14,9 @@ app.post("/webhook", express.raw({ type: "application/json" }), webhookHandler);
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
 
-// app.get("*", (request: Request, response: Response) => {
-//   response.redirect("/products");
-// });
+app.get("/", (request: Request, response: Response) => {
+  response.redirect("/products");
+});
 
 conn();
 const port = process.env.PORT || 9000;
