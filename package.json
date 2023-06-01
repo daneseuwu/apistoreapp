@@ -12,9 +12,10 @@
   "author": "Douglas Deodanes",
   "license": "ISC",
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.13",
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/node": "^20.2.3",
-    "@types/cors": "^2.8.13",
     "ts-node": "^2.0.0",
     "typescript": "^5.0.4"
   },
