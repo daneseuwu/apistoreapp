@@ -4,7 +4,6 @@ import conn from "./config/mongo";
 import productRoutes from "./routes/product";
 import orderRoutes from "./routes/order";
 import { webhookHandler } from "./webhook";
-import { request } from "http";
 require("dotenv").config();
 
 const app = express();
@@ -12,13 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/webhook", express.raw({ type: "application/json" }), webhookHandler);
-
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
 
-app.get("*", (request: Request, response: Response) => {
-  response.redirect("/products");
-});
+// app.get("*", (request: Request, response: Response) => {
+//   response.redirect("/products");
+// });
 
 conn();
 const port = process.env.PORT || 9000;
