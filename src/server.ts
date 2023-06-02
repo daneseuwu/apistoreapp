@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 
-const whiteList=["http://localhost:5173/"];
+const whiteList=["https://apistoreapp.cyclic.app/products"];
 app.use(cors({origin:whiteList}));
 
 app.post("/webhook", express.raw({ type: "application/json" }), webhookHandler);
