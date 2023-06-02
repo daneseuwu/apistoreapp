@@ -40,11 +40,10 @@ export const getProduct = async (request: Request, response: Response) => {
 
     return response.status(200).json({
       status: 200,
-      data: products,
+      results: products,
       message: "Listado de producto con exito",
     });
   } catch (error) {
-    console.log(error);
     return response.status(500).json({
       status: 500,
       message:
@@ -59,11 +58,10 @@ export const getIdProduct = async (request: Request, response: Response) => {
     const product = await Product.findById(id);
     return response.status(200).json({
       status: 200,
-      data: product,
+      result: product,
       message: "Listado de producto con exito",
     });
   } catch (error) {
-    console.log(error);
     return response.status(500).json({
       status: 500,
       message: "Upps parece que ha ocurrido un error al obtener el producto",
