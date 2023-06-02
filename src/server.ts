@@ -7,8 +7,10 @@ import { webhookHandler } from "./webhook";
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
 app.use(express.json());
+
+const whiteList=["http://localhost:5173/"];
+app.use(cors({origin:whiteList}));
 
 app.post("/webhook", express.raw({ type: "application/json" }), webhookHandler);
 app.use("/products", productRoutes);
